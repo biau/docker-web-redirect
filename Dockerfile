@@ -8,7 +8,9 @@ RUN apk add --update bash \
 	&& chgrp -R 0 /var/cache/nginx/ \
 	&& chmod -R g+rw /var/cache/nginx/ \
 	&& chgrp -R 0 /var/run/ \
-	&& chmod -R g+rw /var/run/	
+	&& chmod -R g+rw /var/run/ \
+ 	&& chgrp -R 0 /etc/nginx/conf.d/default.conf \
+	&& chmod -R g+rw /etc/nginx/conf.d/default.conf
  
 EXPOSE 8080
 
